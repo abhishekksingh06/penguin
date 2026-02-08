@@ -30,12 +30,16 @@ impl SourceFile {
     }
 
     pub fn line_col(&self, pos: BytePos) -> LineColumn {
-        let line = self
-            .line_starts
-            .binary_search(&pos)
-            .unwrap_or_else(|x| x + 1);
+        let line = match self.line_starts.binary_search(&pos) {
+            Ok(i) => i,
+            Err(0) => 0,
+            Err(i) => i - 1,
+        };
         let col = pos.0 - self.line_starts[line].0;
-        LineColumn { line, col }
+        LineColumn {
+            line: line + 1,
+            col: col + 1,
+        }
     }
 }
 

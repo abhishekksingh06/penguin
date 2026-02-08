@@ -5,14 +5,18 @@ version = 4
 [[package]]
 name = "ginto"
 version = "0.1.0"
+dependencies = [
+ "ginto_diag",
+ "ginto_syntax",
+]
 
 [[package]]
-name = "ginto_diagnostics"
+name = "ginto_diag"
 version = "0.1.0"
 
 [[package]]
-name = "syntax"
+name = "ginto_syntax"
 version = "0.1.0"
 dependencies = [
- "ginto_diagnostics",
+ "ginto_diag",
 ]

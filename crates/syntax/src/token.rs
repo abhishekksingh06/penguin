@@ -1,6 +1,6 @@
 use core::fmt;
 
-use ginto_diagnostics::Spanned;
+use ginto_diag::Spanned;
 
 #[derive(Debug, Clone, PartialEq, PartialOrd)]
 pub enum TokenKind {

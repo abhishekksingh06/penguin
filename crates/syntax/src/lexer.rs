@@ -1,4 +1,4 @@
-use ginto_diagnostics::{Diagnostic, DiagnosticConvertible, FileId, Label, Severity, Span};
+use ginto_diag::{Diagnostic, DiagnosticConvertible, FileId, Label, Severity, Span};
 
 use crate::{Token, TokenKind};
 

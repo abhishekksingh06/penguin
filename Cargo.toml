@@ -4,7 +4,9 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+ginto_diag = { path = "crates/diag" }
+ginto_syntax = { path = "crates/syntax" }
 
 [workspace]
-members = ["crates/diagnostics", "crates/syntax"]
+members = ["crates/diag", "crates/syntax"]
 resolver = "3"
